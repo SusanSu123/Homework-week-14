@@ -17,6 +17,7 @@ Your task this week is to build a CMS-style blog site similar to a Wordpress sit
 * npm start
 * Use postman/insomnia to test routes 
   on http//:localhost:3001/
+* deploy on https://susan-tech-blog.herokuapp.com/
 
 ## Prequisites
 
@@ -72,3 +73,5 @@ THEN I am signed out of the site
 WHEN I am idle on the site for more than a set time
 THEN I am able to view comments but I am prompted to log in again before I can add, update, or delete comments
 ```
+
+
