@@ -36,7 +36,7 @@ router.get('/post/:id', (req, res) => {
         },
         attributes: [
             'id',
-            'content',
+            'post_text',
             'title',
             'created_at'
         ],
@@ -77,7 +77,7 @@ router.get('/posts-comments', (req, res) => {
         },
         attributes: [
             'id',
-            'content',
+            'post_text',
             'title',
             'created_at'
         ],

@@ -1,6 +1,31 @@
 const router = require('express').Router();
 const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
+// router.get('/', async (req, res) => {
+//     try {
+//         const dbCommentData = await Comment.findAll({
+//     include: [
+//         {
+//           model: User,
+//           attributes: ['user_id'],
+//         },
+//       ],
+//     });
+
+//     const comments = dbCommentData.map((comment) =>
+//       comment.get({ plain: true })
+//     );
+//     // Send over the 'loggedIn' session variable to the 'homepage' template
+//     res.render('homepage', {
+//       ,
+//       loggedIn: req.session.loggedIn,
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     res.status(500).json(err);
+//   }
+// });
+
 router.get('/', (req, res) => {
     Comment.findAll({})
         .then(dbCommentData => res.json(dbCommentData))
