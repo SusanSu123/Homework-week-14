@@ -6,30 +6,9 @@ const withAuth = require('../../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    const postData = await Post.findAll({
-          attributes: ['id',
-              'title',
-              'post_text',
-              'created_at'
-          ],
-          order: [
-              ['created_at', 'DESC']
-          ],
-          include: [{
-                  model: User,
-                  attributes: ['username']
-              },
-              {
-                  model: Comment,
-                  attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-                  include: {
-                      model: User,
-                      attributes: ['username']
-                  }
-              }
-          ]
+    const postData = await Post.findAll({   
       })
-    
+
       res.json(postData.reverse())
     } catch (err){
           res.status(500).json(err);
@@ -43,26 +22,7 @@ router.get('/:id', async (req, res) => {
     const getOne = await Post.findOne({
           where: {
               id: req.params.id
-          },
-          attributes: ['id',
-            'post_text',
-            'title',
-            'created_at'
-          ],
-          include: [
-            {
-               model: User,
-               attributes: ['username']
-            },
-            {
-              model: Comment,
-              attributes: ['id', 'comment_text', 'post_id', 'user_id', 'created_at'],
-              include: {
-                model: User,
-                attributes: ['username']
-              }
-            }
-          ]
+          }        
       })
     
       if (!getOne) {
