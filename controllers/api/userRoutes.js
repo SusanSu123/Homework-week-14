@@ -67,3 +67,7 @@ router.post('/', async (req, res) => {
   module.exports = router;
 
 
+   // "email": "sal@hotmail.com",
+  //"email": "lernantino@gmail.com",
+   //"email": "amiko2k20@aol.com",
+
