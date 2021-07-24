@@ -6,7 +6,7 @@ Your task this week is to build a CMS-style blog site similar to a Wordpress sit
 
 ## How to install
 
-* Git clone https://github.com/SusanSu123/Homework-week-14.git
+* Git clone https://github.com/SusanSu123/Model-View-Controller-MVC-Tech-Blog.git
 * npm install pakages from pakage.json
 * create .env file
 * create DB in MySQL Workbench
